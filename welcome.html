@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToG : New World Wiki</title>
+    <link href="css/app.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="js/load-characters.js"></script>
+</head>
+<body>
+    <div class="vertical-image left">
+        <img src="./images/fondo3.png" alt="Left Vertical Image">
+    </div>
+
+    <!-- Right vertical image -->
+    <div class="vertical-image right">
+        <img src="./images/fondo3.png" alt="Right Vertical Image">
+    </div>
+
+    <nav class="navbar">
+
+        <a href="#" onclick="filterData()"><img id="rarity" src="./images/rarity/ssr.png"></a>
+        <a href="#" onclick="filterData()"><img id="rarity" src="./images/rarity/ssrplus.png"></a>
+
+        <a href="#" onclick="filterData()"><img id="color" src="./images/elements/yellow.png"></a>
+        <a href="#" onclick="filterData()"><img id="color" src="./images/elements/purple.png"></a>
+        <a href="#" onclick="filterData()"><img id="color" src="./images/elements/red.png"></a>
+        <a href="#" onclick="filterData()"><img id="color" src="./images/elements/green.png"></a>
+        <a href="#" onclick="filterData()"><img id="color" src="./images/elements/blue.png"></a>
+
+        <a href="#" onclick="filterData()"><img id="class" src="./images/types/magic.png"></a>
+        <a href="#" onclick="filterData()"><img id="class" src="./images/types/physical.png"></a>
+
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/assassin.png"></a>
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/mage.png"></a>
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/ranged.png"></a>
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/support.png"></a>
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/tank.png"></a>
+        <a href="#" onclick="filterData()"><img id="type" src="./images/classes/warrior.png"></a>
+        
+    </nav>
+
+    <div id="container" class="image-container">
+
+        <script>chargeCharacters()</script>
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    
+    const images = document.querySelectorAll('.draggable-image[data-image-value]');
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            const imageValue = img.dataset.imageValue;
+            // Redirect to another view and send the image value as a query parameter
+            window.location.href = `./another-view.html?imageValue=${imageValue}`;
+        });
+    });
+    </script>
+    
+    <script type="text/javascript" src="js/filters.js"></script>
+</body>
+</html>
