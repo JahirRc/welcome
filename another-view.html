@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToG : New World Wiki</title>
     <link href="css/characters-page.css" rel="stylesheet">
-
+    <link href="css/stars.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 </head>
 <body>
+    
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+
 
     <div class="vertical-image left">
-        <img src="./images/fondo3.png" alt="Left Vertical Image">
+        <img src="./images/fondo4.png" alt="Left Vertical Image">
     </div>
 
     <!-- Right vertical image -->
     <div class="vertical-image right">
-        <img src="./images/fondo3.png" alt="Right Vertical Image">
+        <img src="./images/fondo4.png" alt="Right Vertical Image">
     </div>
 
     <nav class="navbar" id="nav">
@@ -27,6 +34,10 @@
 
     <div class="image-container" id="character">
 
+    </div>
+
+    <div id="abilities" class="abilities">
+        
     </div>
     
     <footer>
@@ -37,6 +48,7 @@
 
     <script src="js/show-selected.js"></script>
     <script src="js/characters.js"></script>
+    <script src="js/abilities.js"></script>
 </body>
 </html>
 
