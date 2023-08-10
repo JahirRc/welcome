@@ -1,4 +1,4 @@
-
+/* CHANGE SAME-OTHER CHARACTER INFO */
 function changeImage(value) {
 
     data = [
@@ -21,7 +21,7 @@ function changeImage(value) {
             "element": "./images/elements/blue.png",
             "class": "./images/classes/assassin.png",
             "type": "./images/types/magic.png",
-            "history": ""
+            "history": "The data of Khun Mascheny Zahard, which was copied to the hidden floor when she climbed the Tower. She is one of the children which Khun Edahn's data is fond of.<br><br>"
         }
     ]
 
@@ -34,6 +34,8 @@ function changeImage(value) {
     var element2 = document.getElementById("element2");
     var classs2 = document.getElementById("classs2");
     var type2 = document.getElementById("type2");
+
+    var history = document.getElementById("history");
 
     a = value;
 
@@ -56,7 +58,7 @@ function changeImage(value) {
 
         case "The Bloody Dawn of Civilization":
             if(document.getElementById("The Bloody Dawn of Civilization").getAttribute("src") == "./images/9.png"){
-
+                
                 document.getElementById("The Bloody Dawn of Civilization").src = "./images/16.png";
                 title.innerHTML = data[1]['title'];
                 name.innerHTML = data[1]['name'];
@@ -65,6 +67,11 @@ function changeImage(value) {
 
                 element2.src = data[1]['element'];
                 classs2.src = data[1]['class'];
+
+                history.innerHTML = '<h1>'+data[1]['history']+'</h1>';
+                
+                selectedAbilities(16);
+                console.log(history);
         
             }else{
 
@@ -76,6 +83,10 @@ function changeImage(value) {
 
                 element2.src = "./images/elements/purple.png";
                 classs2.src = "./images/classes/ranged.png";
+
+                history.innerHTML = "<h1>A Princess of Zahard who was given the Yellow May by King Zahard. She is a High Ranker from the Khun Family, one of the Great Families, and is the founder of the Mascheny-style Lightning Spear Arts.<br><br>She not only has excellent fighting ability, but also a strategic mind to understand the greater situation of a battle and turn the tide. Her cold expression and lofty attitude make many envious of her.<br><br>However, at heart, she is a war-crazed individual who finds excitement in blood and battle, and she finds the present peace in the Tower boring compared to ancient times.</h1>";
+
+                selectedAbilities(13);
             }
         break;
 
