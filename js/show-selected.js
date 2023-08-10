@@ -1,9 +1,10 @@
+/* GET URL */
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
-// Example of how to retrieve and use the query parameters
+/* QUERY PARAM CHARACTER POSITION ON DATA */
 document.addEventListener('DOMContentLoaded', () => {
     const value = getQueryParam('imageValue');
 
@@ -11,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     changeImage(value);
     selectedCharacter(value);
+    selectedAbilities(value);
 });
 
-
+/* CREATE SELECTED CHARACTER PAGE USING PARAM VALUE */
 function selectedCharacter(value){
 
     data = [{
@@ -144,7 +146,7 @@ function selectedCharacter(value){
         "element": "./images/elements/blue.png",
         "class": "./images/classes/support.png",
         "type": "./images/types/magic.png",
-        "history": ""
+        "history": "One of the second-floor test admins and a Ranker with considerable skill.<br><br>He is a handsome, two-meter-tall blond and the instructor for the Light Bearer Position.<br><br>Although the manner in which he explains to the Regulars about those chosen by the Tower seems callous, he is actually the kindest and most righteous person on the test administration team.<br><br>After those tests, he begins to question the Tower's system and goes searching for answers."
     },
     {
         "name": "<span style='color:#B695C0'>[Lightning Spear]</span> Khun Mascheny",
@@ -154,18 +156,23 @@ function selectedCharacter(value){
         "element": "./images/elements/purple.png",
         "class": "./images/classes/ranged.png",
         "type": "./images/types/magic.png",
-        "history": ""
+        "history": "A Princess of Zahard who was given the Yellow May by King Zahard. She is a High Ranker from the Khun Family, one of the Great Families, and is the founder of the Mascheny-style Lightning Spear Arts.<br><br>She not only has excellent fighting ability, but also a strategic mind to understand the greater situation of a battle and turn the tide. Her cold expression and lofty attitude make many envious of her.<br><br>However, at heart, she is a war-crazed individual who finds excitement in blood and battle, and she finds the present peace in the Tower boring compared to ancient times."
     }]
 
     const navbar = document.getElementById('nav');
     const imageCharacter = document.getElementById('character');
 
+
+    const abilities = document.getElementById('abilities');
+
+
     let characterHTML = '';
     let imageCharacterHTML = '';
-    characterHTML += '<a href="#">' + '<img id="rarity2"' + 'src="' + data[value]['rarity'] + '"></a>';
-    characterHTML += '<a href="#">' + '<img id="element2"' + 'src="' + data[value]['element'] + '"></a>';
-    characterHTML += '<a href="#">' + '<img id="classs2"' + 'src="' + data[value]['class'] + '"></a>';
-    characterHTML += '<a href="#">' + '<img id="type2"' + 'src="' + data[value]['type'] + '"></a>';
+    let abilitiesHTML = '';
+    characterHTML += '<a>' + '<img id="rarity2"' + 'src="' + data[value]['rarity'] + '"></a>';
+    characterHTML += '<a>' + '<img id="element2"' + 'src="' + data[value]['element'] + '"></a>';
+    characterHTML += '<a>' + '<img id="classs2"' + 'src="' + data[value]['class'] + '"></a>';
+    characterHTML += '<a>' + '<img id="type2"' + 'src="' + data[value]['type'] + '"></a>';
 
     imageCharacterHTML += '<div class="img-wrapper">' +
         '<img onclick="changeImage(this.id)" id="' + data[value]['title'] + '"' + 'src="' + data[value]['image'] +
