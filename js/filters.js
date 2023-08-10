@@ -5,10 +5,10 @@ colorImages.forEach(image => {
     image.addEventListener('click', () => {
         selectedColor = image.getAttribute('src');
         console.log(selectedColor);
-        filterData();
     });
 });
 
+/* FILTER - NAVBAR */
 function filterData() {
     const imageWrappers = document.querySelectorAll('.img-wrapper');
     imageWrappers.forEach(wrapper => {
@@ -23,6 +23,21 @@ function filterData() {
         }
     });
 }
+
+/* LIVE SEARCH */
+$(document).ready(function() {
+    $('#searchInput').on('input', function() {
+        var searchValue = $(this).val().toLowerCase();
+        $('.image-container .img-wrapper').each(function() {
+            var itemData = $(this).data('name').toLowerCase();
+            if (itemData.indexOf(searchValue) === -1) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
+    });
+});
 
 
 
