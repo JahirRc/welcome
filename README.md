@@ -38,4 +38,4 @@ This is a raw html-css-js app, u only need to open 'welcome.html'.
 ## Character Page (Endorsi Character)
 ![image](https://github.com/JahirRc/welcome/assets/72409427/8ba535fd-754e-4070-aa3e-9d44a785f3a6)
 
-
+You can edit this webpage, let me a commentary, I want to learn.
