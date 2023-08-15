@@ -129,7 +129,7 @@ function chargeCharacters()
         "element": "./images/elements/blue.png",
         "class": "./images/classes/support.png",
         "type": "./images/types/magic.png",
-        "history": ""
+        "history": "One of the second-floor test admins and a Ranker with considerable skill.<br><br>He is a handsome, two-meter-tall blond and the instructor for the Light Bearer Position.<br><br>Although the manner in which he explains to the Regulars about those chosen by the Tower seems callous, he is actually the kindest and most righteous person on the test administration team.<br><br>After those tests, he begins to question the Tower's system and goes searching for answers."
     },
     {
         "name": "[Lightning Spear]Khun Mascheny",
@@ -139,7 +139,7 @@ function chargeCharacters()
         "element": "./images/elements/purple.png",
         "class": "./images/classes/ranged.png",
         "type": "./images/types/magic.png",
-        "history": ""
+        "history": "A Princess of Zahard who was given the Yellow May by King Zahard. She is a High Ranker from the Khun Family, one of the Great Families, and is the founder of the Mascheny-style Lightning Spear Arts.<br><br>She not only has excellent fighting ability, but also a strategic mind to understand the greater situation of a battle and turn the tide. Her cold expression and lofty attitude make many envious of her.<br><br>However, at heart, she is a war-crazed individual who finds excitement in blood and battle, and she finds the present peace in the Tower boring compared to ancient times."
     }]
 
     const container = document.getElementById('container');
